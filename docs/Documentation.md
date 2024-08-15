@@ -21,7 +21,6 @@ This project is an interactive map for a fantasy game that displays the world ma
 
 Node.js and npm installed
 MongoDB instance (local or cloud)
-API keys for any map services if using tile-based maps (e.g., OpenStreetMap)
 
 ### Installation
 
@@ -54,67 +53,57 @@ This project consists of several key components:
 
 ---
 
-1. Setting Up LeafletJS
+1.  Setting Up LeafletJS
 
-- Integration: LeafletJS is integrated into the Next.js application using the react-leaflet package.
-- Base Map: The world map is displayed using a base layer, which could be a static image or a tile-based map from a service like OpenStreetMap.
+    - Integration: LeafletJS is integrated into the Next.js application using the react-leaflet package.
+    - Base Map: The world map is displayed using a base layer, which could be a static image.
 
-### Layer Management
+    Layer Management
 
-- Dynamic Layers: Different data types (e.g., character locations, quests) are displayed on separate layers that can be toggled on and off.
-- Base Layer: Initialize and configure the base layer to represent the fantasy world map.
+    - Dynamic Layers: Different data types (e.g., character locations, quests) are displayed on separate layers that can be toggled on and off.
+    - Base Layer: Initialize and configure the base layer to represent the fantasy world map.
 
-2. Data Scraping with CheerioJS
+2.  Data Scraping with CheerioJS
 
-Workflow
+    Workflow
 
-- Web Scraping: Use CheerioJS in a Node.js script to periodically scrape data from the game’s website.
-- Data Parsing: Extract relevant information such as character locations and quest statuses from the HTML.
+    - Web Scraping: Use CheerioJS in a Node.js script to periodically scrape data from the game’s website.
+    - Data Parsing: Extract relevant information such as character locations and quest statuses from the HTML.
 
-3. Storing Data in MongoDB
+3.  Process scraped data with Cortex AI
 
-Database Design
+    - Process and translate scraped data from CheerioJS with Cortex AI to be displayed on interactive map.
 
-- Collections: Data is organized into collections such as characters and quests.
-- Structure: The data model is designed to facilitate easy querying and updating.
+4.  Storing Data in MongoDB
 
-Temporary vs. Permanent Storage
+    Database Design
 
-- Temporary Storage: Data is stored temporarily during scraping and processing.
-- Permanent Storage: Use MongoDB for persistent storage to support historical tracking and analytics.
+    - Collections: Data is organized into collections such as characters and quests.
+    - Structure: The data model is designed to facilitate easy querying and updating.
 
-4. Fetching Data with Next.js
+    Temporary vs. Permanent Storage
 
-API Routes
+    - Temporary Storage: Data is stored temporarily during scraping and processing.
+    - Permanent Storage: Use MongoDB for persistent storage to support historical tracking and analytics.
 
-- Setup: API routes in Next.js are used to fetch data from MongoDB and serve it to the front-end.
+5.  Fetching Data with Next.js
 
-Client-Side Data Fetching
+    API Routes
 
-- Fetching Data: In Next.js components, data is fetched using getServerSideProps or useEffect, depending on the need for SSR or CSR.
+    - Setup: API routes in Next.js are used to fetch data from MongoDB and serve it to the front-end.
 
-5. Displaying Data on the Map
+    Client-Side Data Fetching
 
-   Plotting Data Points
+    - Fetching Data: In Next.js components, data is fetched using getServerSideProps or useEffect, depending on the need for SSR or CSR.
 
-   - Markers: Data points (e.g., characters, quests) are plotted on the map as markers or icons.
-   - Layer Control: Leaflet’s layer control feature is used to toggle visibility of different data layers.
+6.  Displaying Data on the Map
 
-   Interactivity
+    Plotting Data Points
 
-   - Popups and Tooltips: Add interactive elements like popups or tooltips to display more information when users click on a map marker.
-   - Dynamic Updates: Consider implementing real-time updates using WebSockets or polling for highly dynamic data.
+    - Markers: Data points (e.g., characters, quests) are plotted on the map as markers or icons.
+    - Layer Control: Leaflet’s layer control feature is used to toggle visibility of different data layers.
 
-# Additional Considerations
+    Interactivity
 
-Real-Time Updates
-
-- Implement real-time updates if your data changes frequently. This can be achieved through WebSockets or polling techniques.
-
-Performance Optimization
-
-- Optimize performance by only fetching and displaying data relevant to the current map view or by implementing caching strategies.
-
-User Experience
-
-- Focus on a user-friendly interface with intuitive navigation, filtering options, and search functionality to enhance the overall experience.
+    - Popups and Tooltips: Add interactive elements like popups or tooltips to display more information when users click on a map marker.
+    - Dynamic Updates: Consider implementing real-time updates using WebSockets or polling for highly dynamic data.
