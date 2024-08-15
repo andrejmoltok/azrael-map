@@ -8,12 +8,6 @@ This project is an interactive map for a fantasy game that displays the world ma
 
 1. Setup
 2. Architecture Overview
-3. Displaying the World Map
-4. Data Scraping with CheerioJS
-5. Storing Data in MongoDB
-6. Fetching Data with Next.js
-7. Displaying Data on the Map
-8. Additional Considerations
 
 # Setup
 
