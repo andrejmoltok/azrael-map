@@ -4,5 +4,5 @@
 2. NextJS
 3. MongoDB
 4. Prisma
-5. LeafletJS
+5. OpenLayers
 6. CheerioJS
