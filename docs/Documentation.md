@@ -41,7 +41,7 @@ Clone the repository:
 
 `npm run dev`
 
-### Architecture Overview
+# Architecture Overview
 
 This project consists of several key components:
 
@@ -52,7 +52,9 @@ This project consists of several key components:
 5. Next.js for building the application and fetching/displaying data.
 6. Displaying the World Map
 
-# Setting Up LeafletJS
+---
+
+1. Setting Up LeafletJS
 
 - Integration: LeafletJS is integrated into the Next.js application using the react-leaflet package.
 - Base Map: The world map is displayed using a base layer, which could be a static image or a tile-based map from a service like OpenStreetMap.
