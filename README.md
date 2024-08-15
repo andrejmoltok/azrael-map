@@ -6,3 +6,4 @@
 4. Prisma
 5. OpenLayers
 6. CheerioJS
+7. Cortex AI
