@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project is an interactive map for a fantasy game that displays the world map along with the current locations of characters and ongoing quests. The map is built using LeafletJS and Next.js, with data scraped from a website using CheerioJS, processed by Cortex AI, and stored in MongoDB.
+This project is an interactive map for a fantasy game that displays the world map along with the current locations of characters and ongoing quests. The map is built using OpenLayers API and Next.js, with data scraped from a website using CheerioJS, processed by Cortex AI, and stored in MongoDB.
 
 # Table of Contents
 
@@ -38,7 +38,7 @@ Clone the repository:
 
 This project consists of several key components:
 
-1. LeafletJS for rendering the interactive map.
+1. OpenLayers API for rendering the interactive map.
 2. CheerioJS for scraping real-time data from the game’s website.
 3. Cortex AI for processing and translating scraped data.
 4. MongoDB for storing data about characters and quests.
@@ -47,9 +47,9 @@ This project consists of several key components:
 
 ---
 
-1.  Setting Up LeafletJS
+1.  Setting Up OpenLayers API
 
-    - Integration: LeafletJS is integrated into the Next.js application using the react-leaflet package.
+    - Integration: OpenLayers API is integrated into the Next.js applicationn.
     - Base Map: The world map is displayed using a base layer, which could be a static image.
 
     Layer Management
@@ -88,7 +88,7 @@ This project consists of several key components:
 
     Client-Side Data Fetching
 
-    - Fetching Data: In Next.js components, data is fetched using getServerSideProps or useEffect, depending on the need for SSR or CSR.
+    - Fetching Data: In Next.js components, data is fetched using useEffect, depending on the need for SSR or CSR.
 
 6.  Displaying Data on the Map
 
