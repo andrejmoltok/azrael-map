@@ -8,7 +8,7 @@
   justify-content: space-evenly;
 }
 
-.main > .info {
+.main .info {
   min-width: 500px;
   min-height: inherit;
   display: flex;
@@ -17,7 +17,7 @@
   justify-content: flex-start;
 }
 
-.main > .map {
+.main .map {
   min-width: 803px;
   min-height: inherit;
 }
